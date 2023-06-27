@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "user" (
+CREATE TABLE "User" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "nome" TEXT NOT NULL
+    "name" TEXT NOT NULL
 );

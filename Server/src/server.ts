@@ -1,25 +1,15 @@
-import fastify from "fastify";
-import cors from "@fastify/cors";
-import { memoriesRoutes } from "./routes/memories";
+import fastify from 'fastify'
 
-const app = fastify();
+const app = fastify()
 
-app.register(cors, {
-  origin: true, // todas as urls de front-end poderão acessar nosso back-end
-});
-app.register(memoriesRoutes);
+app.get('/hello', () => {
+  return 'Servidor Online! 🚀'
+})
 
 app
   .listen({
     port: 3333,
   })
   .then(() => {
-    console.log("🚀HTTP server running on http://localhost:3333");
-  });
-
-// HTTP METHOD: GET, POST, PUT, PATCH, DELETE
-// GET = Lista alguma coisa
-// POST = Criar alguma coisa
-// PUT =  Atualizar alguma coisa
-// PATCH = Atualizar alguma coisa expecífica dentro de um recurso
-// DELETE = Quando for deletar alguma coisa
+    console.log('🚀 Servidor rodando em http://localhost:3333 🚀')
+  })
